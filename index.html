@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Intrusion Detection System Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>AI-Powered Intrusion Detection System</h1>
+            <!-- Project Logo -->
+            <!-- <img src="path_to_logo.png" alt="Project Logo"> -->
+            <h2>Using Machine Learning and the UNSW-NB15 Dataset</h2>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#executive-summary">Executive Summary</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#project-proposal">Project Proposal</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#code-implementation">Code Implementation</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#discussion">Discussion</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#related-work">Related Work</a></li>
+                <li><a href="#appendix">Appendix</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+
+            <!-- Executive Summary -->
+            <section id="executive-summary">
+                <h2>Executive Summary</h2>
+                <p>The <strong>AI-Powered Intrusion Detection System</strong> is a project aimed at enhancing network security by designing an intelligent Intrusion Detection System (IDS). By leveraging both signature-based and anomaly detection techniques through machine learning models, the project seeks to identify and prevent cyberattacks in real-time, addressing the increasing challenges organizations face in securing their networks.</p>
+            </section>
+
+            <!-- Introduction -->
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <h3>Background Information</h3>
+                <p>As internet-based services proliferate, the threat landscape for cyberattacks expands correspondingly. Organizations are under constant risk from data breaches, unauthorized access, and various network threats. Traditional security measures are often insufficient to combat sophisticated attacks, necessitating advanced solutions like intelligent IDS that can monitor and analyze network traffic to identify suspicious activities proactively.</p>
+
+                <h3>Objectives</h3>
+                <ul>
+                    <li><strong>Primary Goal:</strong> Design and implement an effective Network Intrusion Detection System utilizing machine learning techniques.</li>
+                    <li><strong>Specific Objectives:</strong>
+                        <ul>
+                            <li>Employ both signature-based and anomaly detection methods.</li>
+                            <li>Utilize the UNSW-NB15 dataset for training and evaluating the IDS.</li>
+                            <li>Develop machine learning models capable of identifying unusual network traffic patterns.</li>
+                            <li>Create visualizations to represent traffic trends and detected threats.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Project Proposal -->
+            <section id="project-proposal">
+                <h2>Project Proposal</h2>
+                <h3>Problem Statement</h3>
+                <p>Organizations face increasing challenges in securing their networks from threats like data breaches and unauthorized access. An effective Network Intrusion Detection System (IDS) is essential for monitoring and identifying suspicious network activities in real-time to prevent such attacks and protect sensitive data.</p>
+
+                <h3>Solution Overview</h3>
+                <p>Our goal is to design and implement a Network Intrusion Detection System (IDS) that uses both signature-based and anomaly detection techniques. We employ data science methods, leveraging machine learning to identify and flag unusual or potentially dangerous network traffic patterns.</p>
+
+                <h3>Scope and Limitations</h3>
+                <ul>
+                    <li><strong>Scope:</strong>
+                        <ul>
+                            <li>Implementation of IDS using Python and relevant libraries.</li>
+                            <li>Detection of intrusions using machine learning models such as Random Forest and Support Vector Machines (SVM).</li>
+                            <li>Visualization of network traffic data and detected anomalies.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Limitations:</strong>
+                        <ul>
+                            <li>The ability to generalize the models to real-world environments beyond the UNSW-NB15 dataset.</li>
+                            <li>Real-time processing capabilities may be limited due to computational demands.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Methodology -->
+            <section id="methodology">
+                <h2>Methodology</h2>
+                <h3>Materials and Tools</h3>
+                <ul>
+                    <li><strong>Programming Language:</strong> Python</li>
+                    <li><strong>Libraries:</strong> pandas, scikit-learn, matplotlib, seaborn</li>
+                    <li><strong>Dataset:</strong> UNSW-NB15 dataset (a comprehensive dataset with labeled network traffic data for training and evaluation)</li>
+                    <li><strong>Development Environment:</strong> Jupyter Notebook</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <ol>
+                    <li><strong>Data Collection:</strong> Utilize the UNSW-NB15 dataset to train and test the IDS.</li>
+                    <li><strong>Data Preprocessing:</strong> Clean the dataset to handle missing values and normalize data.</li>
+                    <li><strong>Feature Engineering:</strong> Extract relevant features such as protocol types, port numbers, packet sizes, and timestamps.</li>
+                    <li><strong>Model Development:</strong> Implement machine learning models (e.g., Random Forest, SVM) for anomaly detection.</li>
+                    <li><strong>Model Training and Evaluation:</strong> Train models using the training subset and evaluate performance.</li>
+                    <li><strong>Visualization:</strong> Create graphs and charts to represent traffic trends and model performance.</li>
+                </ol>
+            </section>
+
+            <!-- Code Implementation -->
+            <section id="code-implementation">
+                <h2>Code Implementation</h2>
+                <h3>Overview of the Code Structure</h3>
+                <p>The code is organized into several modules, each responsible for different aspects of the system:</p>
+                <ul>
+                    <li><strong>Data Preprocessing Module:</strong> Handles data loading, cleaning, and preprocessing tasks.</li>
+                    <li><strong>Feature Engineering Module:</strong> Extracts and processes features necessary for model training.</li>
+                    <li><strong>Model Training Module:</strong> Implements the machine learning models and handles training and evaluation.</li>
+                    <li><strong>Visualization Module:</strong> Generates plots and charts to visualize data distributions and model performance.</li>
+                    <li><strong>Detection Module:</strong> Contains functions to simulate detection on new data samples.</li>
+                </ul>
+
+                <h3>Key Code Snippets</h3>
+               
+                <pre><code class="language-python">
+# Import Libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Machine Learning Libraries
+from sklearn.svm import SVC
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve
+from sklearn.inspection import permutation_importance
+import joblib
+                </code></pre>
+                <pre><code class="language-python">
+ # Feature Scaling Using StandardScaler
+ scaler = StandardScaler()
+ X_train_scaled = scaler.fit_transform(X_train_sampled)
+ X_test_scaled = scaler.transform(X_test_full)
+ 
+ # Initialize the SVM Classifier with Balanced Class Weights
+ svm_classifier = SVC(kernel='rbf', probability=True, random_state=42, class_weight='balanced')
+ 
+ # Train the SVM Model on the Sampled Data
+ svm_classifier.fit(X_train_scaled, y_train_sampled)
+ print("\nSVM model with class_weight='balanced' trained successfully.")
+ 
+ # Calculate Feature Importance using permutation importance
+ result = permutation_importance(
+     svm_classifier, X_train_scaled, y_train_sampled,
+     n_repeats=10,
+     random_state=42,
+     n_jobs=-1
+ )
+                                    </code></pre>
+                
+
+
+            </section>
+
+
+            
+            <!-- Results -->
+            <section id="results">
+                <h2>Results</h2>
+                <h3>Data Analysis</h3>
+                <p>The exploratory data analysis provided insights into the dataset's structure and the distribution of network traffic types.</p>
+                
+                <img src="images/disofattack.png" alt="Distribution of Target Variable">
+
+                <h3>Feature Importance</h3>
+                <p>Feature importance was calculated using permutation importance, identifying key features contributing to the model's predictions.</p>
+               
+                 <img src="images/TopAtt.png" alt="Feature Importance Graph"> 
+
+                <h3>Model Performance</h3>
+                <p>The SVM classifier achieved high accuracy in detecting both normal and malicious traffic.</p>
+                
+                <pre><code>
+SVM Classifier Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.96      0.94     11200
+           1       0.98      0.96      0.97     23869
+
+    accuracy                           0.96     35069
+   macro avg       0.95      0.96      0.95     35069
+weighted avg       0.96      0.96      0.96     35069
+                </code></pre>
+
+                <img src="images/confusion.png" alt="Confusion Matrix"> 
+            </section>
+
+            <!-- Discussion -->
+            <section id="discussion">
+                <h2>Discussion</h2>
+                <h3>Interpretation of Results</h3>
+                <p>The models, particularly the SVM classifier, showed high accuracy in detecting known attack patterns and identifying anomalies in network traffic.</p>
+
+                <h3>Challenges Faced</h3>
+                <ul>
+                    <li><strong>Model Generalization:</strong> The models may not generalize well to real-world scenarios outside of the UNSW-NB15 dataset.</li>
+                    <li><strong>Imbalanced Data:</strong> Difficulty in detecting rare attack types due to class imbalance.</li>
+                    <li><strong>Real-Time Processing:</strong> Computational demands hindered the ability to process data in real-time.</li>
+                </ul>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+                <h3>Summary</h3>
+                <p>The project successfully demonstrates a method to detect network intrusions by combining signature-based detection with machine learning-based anomaly detection.</p>
+
+                <h3>Future Work</h3>
+                <ul>
+                    <li><strong>Model Enhancement:</strong> Test and adapt models for real-world network environments.</li>
+                    <li><strong>Real-Time Processing:</strong> Optimize algorithms for faster inference.</li>
+                    <li><strong>Scalability:</strong> Investigate cloud-based solutions or distributed computing for handling large-scale data.</li>
+                </ul>
+            </section>
+
+            <!-- Related Work -->
+            <section id="related-work">
+                <h2>Related Work</h2>
+                <p>Existing systems and studies related to our work include:</p>
+                <ul>
+                    <li><strong>Snort:</strong> An open-source signature-based IDS effective against known threats but limited in detecting new attacks.</li>
+                    <li><strong>Zeek (Bro):</strong> A network analysis framework requiring extensive configuration for detailed monitoring.</li>
+                    <li><strong>Machine Learning Studies:</strong> Research into unsupervised learning methods shows promise in detecting anomalies without labeled data.</li>
+                </ul>
+            </section>
+
+            <!-- Appendix -->
+            <section id="appendix">
+                <h2>Appendix</h2>
+                <h3>Full Code Listings</h3>
+                <!-- Include the full code or provide a link to a repository -->
+                <!-- Example: -->
+                <p>The full code is available in the project's GitHub repository:</p>
+                <p><a href="https://github.com/yourusername/your-repo" target="_blank">GitHub Repository Link</a></p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
